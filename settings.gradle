@@ -1,3 +1,6 @@
+include ':myapplication'
+include ':cardviewsecond'
+include ':nestedscrollview'
 include ':androixcardview'
 include ':istar'
 rootProject.name = "My Application"

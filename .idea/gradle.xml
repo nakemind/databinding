@@ -11,7 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/androixcardview" />
+            <option value="$PROJECT_DIR$/cardviewsecond" />
             <option value="$PROJECT_DIR$/istar" />
+            <option value="$PROJECT_DIR$/myapplication" />
+            <option value="$PROJECT_DIR$/nestedscrollview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
