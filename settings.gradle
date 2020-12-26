@@ -1,3 +1,3 @@
-include ':app'
+include ':androixcardview'
 include ':istar'
 rootProject.name = "My Application"
