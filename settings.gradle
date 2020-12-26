@@ -1,2 +1,2 @@
-include ':app'
+include ':istar'
 rootProject.name = "My Application"
