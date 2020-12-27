@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -13,6 +14,7 @@
             <option value="$PROJECT_DIR$/androixcardview" />
             <option value="$PROJECT_DIR$/cardviewsecond" />
             <option value="$PROJECT_DIR$/istar" />
+            <option value="$PROJECT_DIR$/mvvmdemo" />
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/nestedscrollview" />
           </set>

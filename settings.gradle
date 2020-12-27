@@ -1,3 +1,4 @@
+include ':mvvmdemo'
 include ':myapplication'
 include ':cardviewsecond'
 include ':nestedscrollview'
