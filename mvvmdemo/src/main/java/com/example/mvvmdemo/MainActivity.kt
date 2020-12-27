@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmdemo.adapter.UserAdapter
@@ -28,7 +29,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view: View = binding!!.root
         setContentView(view)
-        userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
+        userViewModel=ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory(application)).get(UserViewModel::class.java)
+
+        //userViewModel =ViewModelProvider.AndroidViewModelFactory(application).
+        //userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
         binding!!.recyclerview.setHasFixedSize(true)
         binding!!.recyclerview.layoutManager = LinearLayoutManager(this)
         val isConnected = NetworkStatus.isDeviceConnected(this)
@@ -41,7 +45,8 @@ class MainActivity : AppCompatActivity() {
 
         val ff = UserRepository();
         ff.users
-        userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
+        //userViewModel=ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory(application)).get(UserViewModel::class.java)
+        //userViewModel = ViewModelProvider.of(this).get(UserViewModel::class.java)
 
         userViewModel?.listUsers?.observe(this, Observer {userResponse: UserResponse ->
             binding!!.progressBar.visibility = View.GONE
