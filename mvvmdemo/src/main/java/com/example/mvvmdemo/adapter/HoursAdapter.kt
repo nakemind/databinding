@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmdemo.databinding.HoursListItemsBinding
 
 class HoursAdapter(private val hourList: List<String>) :
-    RecyclerView.Adapter<HoursAdapter.HoursViewHolder> {
+    RecyclerView.Adapter<HoursAdapter.HoursViewHolder>() {
 
 
     inner class HoursViewHolder(val binding: HoursListItemsBinding) :
@@ -22,5 +22,4 @@ class HoursAdapter(private val hourList: List<String>) :
     override fun getItemCount(): Int {
         TODO("Not yet implemented")
     }
-
 }
