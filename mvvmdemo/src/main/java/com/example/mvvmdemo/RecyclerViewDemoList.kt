@@ -7,13 +7,35 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmdemo.adapter.MyRecyclerViewAdapter
 import com.example.mvvmdemo.databinding.ActivityMainRecyclerviewBinding
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RecyclerViewDemoList : AppCompatActivity() {
     private var binding: ActivityMainRecyclerviewBinding? = null
     var adapter: MyRecyclerViewAdapter? = null
+    val binaryReps =TreeMap<Char,String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+        print("\r\n\r\n")
+        for (c in 'A'..'Z') {
+            val binrary =Integer.toBinaryString(c.toInt())
+            binaryReps[c]=binrary
+        }
+
+        for ((letter,binary) in binaryReps) {
+            println("$letter=$binary")
+        }
+        print("\r\n\r\n")
+
+
+        val color = CardType2.SILVER.color
+        for(i in 1..100 step 3){
+            print(fizzBuzz(i))
+        }
+
 
         val jjjs=Client("2222",123)
         val ffss=jjjs.toString()
@@ -51,6 +73,12 @@ class RecyclerViewDemoList : AppCompatActivity() {
         adapter = MyRecyclerViewAdapter(this, animalNames)
         recyclerView?.adapter = adapter*/
 
+        val name="fasdfd"
+        val vwer="fadsfdsaf+$name"
+        Log.d("","")
+        val rectangle=Rectangle(41,43)
+        val valuesss=rectangle.isSquare
+        Log.d("","")
 
     }
 
@@ -78,5 +106,25 @@ class RecyclerViewDemoList : AppCompatActivity() {
             append("\nnow i konw this letter")
             toString()
         }
+    }
+
+    fun getMnemonic(color:Color)=
+        when(color) {
+            Color.RED->"richard"
+            Color.ORANGE->"of"
+            Color.YELLOW->"york"
+            Color.GREEN->""
+            Color.BLUE->""
+            Color.INDIGO->""
+            Color.VIOLET->""
+        }
+
+    fun fizzBuzz(i:Int)=when{
+        i%15==0->"$i "
+        /*i%15==0->"fizzbuzz"
+        i%3==0->"fizz"
+        i%5==0->"buzz"
+        else->"$i"*/
+        else -> "$i "
     }
 }
