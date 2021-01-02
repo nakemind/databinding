@@ -16,10 +16,16 @@ class RecyclerViewDemoList : AppCompatActivity() {
     var adapter: MyRecyclerViewAdapter? = null
     val binaryReps =TreeMap<Char,String>()
 
+
+    fun foo (s:String) {
+        val t:String =s?:"";
+        Log.d("","")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+val vsdfd=foo("fuuu")
 
-
-        print("\r\n\r\n")
+         print("\r\n\r\n")
         for (c in 'A'..'Z') {
             val binrary =Integer.toBinaryString(c.toInt())
             binaryReps[c]=binrary
