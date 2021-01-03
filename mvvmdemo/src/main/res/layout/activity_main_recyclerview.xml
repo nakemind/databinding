@@ -6,9 +6,20 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAnimals"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="getPhoneName"
+        app:layout_constraintTop_toTopOf="@id/rvAnimals"
+
+        android:id="@+id/btn_click_get_phone"
+     />
 </androidx.constraintlayout.widget.ConstraintLayout>
